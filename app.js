@@ -2,6 +2,7 @@
 const listaTareas = document.getElementById("lista-tareas");
 
 function renderizarTareas(tareas) {
+  if (!tareas) { tareas = []; }
   listaTareas.innerHTML = "";
   tareas.forEach(function (tarea) {
     const li = document.createElement("li");
